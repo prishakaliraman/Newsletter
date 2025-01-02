@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-import re
+import re, os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Needed for flashing messages
@@ -29,4 +29,5 @@ def thank_you():
     return render_template('thankyou.html', email=email)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port= int(os.environ.get('PORT', 5000))
+    app.run(host="0.0.0.0", port=port) 
