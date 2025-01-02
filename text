@@ -1,0 +1,232 @@
+body {
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.white-box {
+    background-color: white;
+    position: relative;
+    width: 800px;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to the left */
+    padding: 20px; /* Add some spacing inside the box */
+    margin-top: 80px;
+}
+
+.white-box h1 {
+    font-size: 45px;
+    font-family: 'RobotoBold', sans-serif;
+    color: hsl(234, 29%, 20%);
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.white-box p {
+    font-size: 14px;
+    font-family: 'RobotoRegular', sans-serif;
+    font-weight: 400;
+    color: hsl(231, 11%, 25%);
+    margin-top: 5px;
+    margin-left: 30px;
+    line-height: 1.5; /* Adjust this value to increase the space between lines */
+}
+
+.checkbox-text {
+    font-family: 'RobotoRegular', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: hsl(234, 29%, 20%);
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-top: 10px; /* Add space between each checkbox-text pair */
+    margin-left: 30px; /* Add space to the left of the text */
+}
+
+.checkbox-image {
+    width: 20px; /* Adjust the size of the checkbox image */
+    height: 20px; /* Adjust the size of the checkbox image */
+    margin-right: 10px; /* Add space between the checkbox and the text */
+}
+.email-heading {
+    font-size: 12px;
+    font-family: 'RobotoBold', sans-serif;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+    margin-top: 40px; /* Adjust this value to position the heading */
+    margin-left: 30px;
+}
+.email-input {
+    width: 300px; /* Adjust the width of the input field */
+    height: 20px;
+    padding: 10px;
+    margin-left: 30px;
+    margin-top: -5px;
+    border: 1px solid hsl(65, 6%, 65%);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'RobotoRegular', sans-serif;
+}
+
+.email-input.invalid {
+    border-color: red;
+    background-color: #ffe6e6; /* Light red background */
+    color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    font-family: 'RobotoRegular', sans-serif;
+    font-weight: 600;
+    position: absolute; /* Position the error message absolutely */
+    margin-left: 250px;
+    margin-top: 332px;
+    display: none; /* Hide the error message by default */
+}
+
+.subscribe-button {
+    width: 325px; /* Adjust the width of the button */
+    height: 45px; /* Adjust the height of the button */
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-size: 12px;
+    font-family: 'RobotoBold', sans-serif;
+    font-weight: 600;  /* Adjust the font weight */
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Adjust this value to position the button */
+    margin-left: 10px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.subscribe-button:hover {
+    background-color: hsl(14, 85%, 46%); /* Darken the background color on hover */
+    box-shadow: 0 4px 8px rgba(248, 97, 59, 0.815); /* Light shadow below the button */
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+.desktop-image {
+    width: 380px; /* Set the desired width */
+    height: 500px; /* Set the desired height */
+    border-radius: 10px; /* Optional: add rounded corners */
+    position: absolute; /* Use absolute positioning */
+    top: 20px; /* Adjust the top position as needed */
+    left: 430px; /* Adjust the left position as needed */
+    object-fit: cover; /* Cover the entire container */
+}  
+
+.mobile-image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners */
+    margin-top: 20px; /* Add some space above the image */
+    display: none; /* Hide mobile image by default */
+}
+
+/* Show mobile image and hide desktop image on small screens */
+@media (max-width: 768px) {
+    .desktop-image {
+        display: none;
+    }
+    .mobile-image {
+        display: block;
+    }
+}
+
+.attribution {
+    font-size: 13px;
+    font-family: 'RobotoRegular', sans-serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: 80px;
+    position: relative; /* Ensure it is positioned relative to its parent */
+    z-index: 1; /* Ensure it stays above other elements */
+}
+
+.attribution a {
+    color: rgb(255, 255, 255); /* Set link color to white */
+    text-decoration: none; /* Optional: remove underline from links */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="stati/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <title>Newsletter Page</title>
+</head>
+<body>
+  <div class="white-box" style="position: relative;">
+    <h1>Stay updated!</h1>
+    <p>
+      Join 60,000+ product managers receiving monthly<br>
+      updates on:
+    </p>
+    <img src="images/desktop-image.svg" alt="Desktop illustration" class="desktop-image"> <!-- Add your image here -->
+    <img src="images/mobile-image.svg" alt="Mobile illustration" class="mobile-image"> <!-- Add your image here -->
+
+    <!-- Checkbox image with the text -->
+    <div class="checkbox-text">
+      <img src="images/icon-list.svg" alt="Checkbox" class="checkbox-image">
+      <span>Product discovery and building what matters</span>
+    </div>
+    <div class="checkbox-text">
+      <img src="images/icon-list.svg" alt="Checkbox" class="checkbox-image">
+      <span>Measuring to ensure updates are a success</span>
+    </div>
+    <div class="checkbox-text">
+      <img src="images/icon-list.svg" alt="Checkbox" class="checkbox-image">
+      <span>And much more!</span>
+    </div>
+
+    <!-- Error message -->
+    <div class="error-message" id="error-message"></div>
+
+    <!-- Email heading and input box -->
+    <h2 class="email-heading">Email address</h2>
+    <form action="{{ url_for('subscribe') }}" method="POST">
+      <input type="email" class="email-input" id="email-input" name="email" placeholder="email@company.com">
+      <!-- Subscribe button -->
+      <button class="subscribe-button" id="subscribe-button">Subscribe Now</button>
+    </form>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Prisha Kaliraman</a>.
+  </div>
+
+  <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>

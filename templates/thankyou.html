@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='thankyou.css') }}"> <!-- Link to your thankyou.css file -->
+  <title>Thank You | FrontEnd Mentor</title>
+</head>
+<body>
+    <div class="small-whitebox">
+        <img src="{{ url_for('static', filename='images/icon-success.svg') }}" alt="Success!" class="success">
+        <p>Thanks for<br>subscribing!</p>
+        <p class="confirmation-message">A confirmation email has been sent to<br><span class="email">{{ email }}</span>. Please open it and click<br>the button inside to confirm your subscription.</p>
+        <button class="dismiss-button" id="dismiss-button">Dismiss message</button>
+    </div>  
+    <script>
+      document.getElementById('dismiss-button').addEventListener('click', function() {
+          window.location.href = "{{ url_for('index') }}";
+      });
+  </script>  
+</body>
+</html>

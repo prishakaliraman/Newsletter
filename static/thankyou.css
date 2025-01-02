@@ -1,0 +1,81 @@
+body {
+    background-color: hsl(235, 18%, 26%);
+}
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+.small-whitebox {
+    width: 400px;
+    height: 450px;
+    background-color: white; /* Set background color to white */
+    color: black; /* Set text color to black for visibility */
+    border-radius: 40px;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
+    text-align: center; /* Center the text and image */
+    margin: 100px auto; /* Center the box horizontally and add top margin */
+}
+
+.small-whitebox img.success {
+    width: 50px; /* Adjust the size of the image */
+    height: auto;
+    margin-top: 30px; /* Add space below the image */
+    margin-right: 300px;
+}
+
+.small-whitebox p {
+    font-family: 'RobotoRegular', sans-serif;
+    font-weight: 570;
+    font-size: 50px;
+    color: hsl(234, 29%, 20%);
+    margin-top: 25px; /* Remove default margin */
+    line-height: 1.2; /* Adjust line height */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add padding to align text */
+}
+
+.confirmation-message {
+    font-family: 'RobotoRegular', sans-serif  !important;
+    font-size: 15px !important; /* Adjust the font size */
+    color: hsl(231, 11%, 25%);
+    position: relative  !important; /* Add space between the heading and message */
+    top: -30px  !important; /* Add space between the heading and message */
+    line-height: 1.5  !important; /* Adjust line height */
+    text-align: left  !important; /* Align text to the left */
+    padding-left: 20px  !important; /* Add padding to align text */
+    
+}
+
+.confirmation-message .email {
+    font-family: 'RobotoBold', sans-serif;
+    font-weight: bold;
+}
+
+.dismiss-button {
+        width: 360px; /* Adjust the width of the button */
+        height: 45px; /* Adjust the height of the button */
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        font-size: 16px; /* Increase the font size */
+        font-family: 'RobotoBold', sans-serif;
+        font-weight: 700; /* Make the text thicker */
+        border: none;
+        border-radius: 10px;
+        position: absolute; /* Position the button absolutely */
+        top: 380px; /* Adjust this value to position the button */
+        left: 30px; /* Adjust this value to position the button */
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+    
+.dismiss-button:hover {
+        background-color: hsl(14, 85%, 46%); /* Darken the background color on hover */
+        box-shadow: 0 4px 8px rgba(248, 97, 59, 0.815); /* Light shadow below the button */
+    }

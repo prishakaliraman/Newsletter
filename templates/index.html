@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Link to your CSS file -->
+  <title>Newsletter Page | FrontEnd Mentor</title>
+</head>
+<body>
+  <div class="white-box" style="position: relative;">
+    <h1>Stay updated!</h1>
+    <p>
+      Join 60,000+ product managers receiving monthly<br>
+      updates on:
+    </p>
+    <img src="{{ url_for('static', filename='images/desktop-image.svg') }}" alt="Desktop illustration" class="desktop-image"> <!-- Add your image here -->
+    <img src="{{ url_for('static', filename='images/mobile-image.svg') }}" alt="Mobile illustration" class="mobile-image"> <!-- Add your image here -->
+
+    <!-- Checkbox image with the text -->
+    <div class="checkbox-text">
+      <img src="{{ url_for('static', filename='images/icon-list.svg') }}" alt="Checkbox" class="checkbox-image">
+      <span>Product discovery and building what matters</span>
+    </div>
+    <div class="checkbox-text">
+      <img src="{{ url_for('static', filename='images/icon-list.svg') }}" alt="Checkbox" class="checkbox-image">
+      <span>Measuring to ensure updates are a success</span>
+    </div>
+    <div class="checkbox-text">
+      <img src="{{ url_for('static', filename='images/icon-list.svg') }}" alt="Checkbox" class="checkbox-image">
+      <span>And much more!</span>
+    </div>
+
+    <!-- Error message -->
+    <div class="error-message" id="error-message"></div>
+
+    <!-- Email heading and input box -->
+    <h2 class="email-heading">Email address</h2>
+    <form action="{{ url_for('subscribe') }}" method="POST">
+      <input type="email" class="email-input" id="email-input" name="email" placeholder="email@company.com">
+      <!-- Subscribe button -->
+      <button class="subscribe-button" id="subscribe-button">Subscribe Now</button>
+    </form>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Prisha Kaliraman</a>.
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
